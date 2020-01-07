@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center mt-5">
+  <div>
+    <h4 class="mb-3">List of Courses</h4>
+    <input (keyup.enter)="addCourse()" placeholder="New Courses" type="text" class="form-control"
+      [(ngModel)]="myCourse">
+    <!-- <button (click)="addCourse()" class="btn btn-secondary btn-block"><i class="mr-2 fa fa-plus"></i>Add
+      Courses</button> -->
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let course of courses">{{ course }}
+        <div class="text-right"><button class="btn btn-warning"><i class="fa fa-trash"></i></button><button
+            class="btn btn-dark"><i class="fa fa-pencil"></i></button></div>
+      </li>
+    </ul>
+  </div>
+</div>
