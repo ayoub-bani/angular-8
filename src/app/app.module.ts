@@ -10,6 +10,8 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './users/users.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { FormsModule } from '@angular/forms';
     ContentComponent,
     FooterComponent,
     CoursesComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
