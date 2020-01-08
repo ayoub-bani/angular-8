@@ -27,9 +27,8 @@ export class UsersComponent implements OnInit {
   searchUsers() {
     this.userService.searchUser(this.mySearch).subscribe((res: any[]) => {
       this.users = res['items'];
-      console.log(res);
-
     })
+    this.mySearch = "";
   }
 
 
