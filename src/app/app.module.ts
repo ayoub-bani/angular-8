@@ -13,6 +13,16 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
+import { RouterModule } from '@angular/router';
+
+
+// Roots
+const routes = [
+  { path: "", component: LayoutComponent },
+  { path: "users", component: UsersComponent },
+  { path: "blog", component: PostsComponent },
+  { path: "coursera", component: CoursesComponent }
+]
 
 @NgModule({
   declarations: [
@@ -30,7 +40,8 @@ import { PostsComponent } from './posts/posts.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
